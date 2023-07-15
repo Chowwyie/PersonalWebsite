@@ -1,0 +1,257 @@
+
+.title {
+    color: white;
+    font-size: 2rem;
+    font-weight: 200;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.subtitle {
+    font-weight: 200;
+}
+
+#monitor-screen {
+    background-color:#20232a;
+    /* background-color: rgb(19, 14, 34); */
+    color: black;
+    font-family: 'Poppins',sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+    top: 5vh;
+    left: 5vw;
+    position: absolute;
+    width: 90vw;
+    height: 90vh;
+    margin: auto;
+    overflow-y: auto;
+    /* border: 1px solid #ccc; */
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+#monitor-screen.black {
+    background-color:black;
+    visibility: visible;
+}
+
+#monitor-screen.black > .screen-container > .title {
+    visibility: hidden;
+}
+
+.container {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    line-height: 0.75; 
+}
+
+.screen-container {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    line-height: 0.75; 
+}
+
+
+#about-me-content{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 50%;
+    height: 50vh;
+}
+
+.scroll-appear {
+    opacity: 0;
+    transition: opacity 0.75s ease, transform 0.75s ease; /* Adjust the transition duration and easing as desired */
+  }
+
+.scroll-appear.enlarge {
+    transform: scale(0.1);
+}
+
+.scroll-appear.slide-right {
+    transform: translateX(-100px);
+}
+
+.scroll-appear.slide-left {
+    transform: translateX(100px);
+}
+
+.scroll-appear.appear {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.line{
+    background-color: white;
+    height: auto;
+    width: 3px;
+}
+
+.line .experience-container:nth-child(odd) > .experience-card {
+    right: 30em;
+}
+  
+.line .experience-container:nth-child(even) > .experience-card {
+    left: 6em;
+}
+
+.line .experience-container:nth-child(odd) > .experience-date {
+    left: 3em;
+}
+  
+.line .experience-container:nth-child(even) > .experience-date {
+    right: 18em;
+}
+
+.line .experience-container:nth-child(odd) > .experience-card::before {
+    left: 21em;
+  }
+  
+.line .experience-container:nth-child(even) > .experience-card::before {
+    right: 21em;
+}
+
+
+.experience-date {
+    text-align: center;
+    display: block;
+    position: relative;
+    width: 15em;
+    top: 2.5em;
+    font-weight: 100;
+    letter-spacing: 1px;
+    color: white;
+}
+
+.experience-card {
+    background-color: #A76F6F;
+    position: relative;
+    width: 20rem;
+    height: fit-content;
+    padding: 1em 2em;
+    border-width: 0;
+    border-bottom: 0.25em solid white;
+}
+
+.experience-card::before {
+    position: absolute;
+    content: "";
+    width: 3em;
+    height: 3em;
+    transform: rotate(45deg);
+    z-index: -1;
+    background-color: inherit;
+}
+
+.experience-logo {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    right: 2.05em;
+    top: 5em;
+    width: 4em;
+    height: 4em;
+    border-radius: 50%;
+    border: 0.2em solid white;
+}
+
+.experience-company {
+    font-size: 2em;
+    margin: 0;
+    margin-top: 0.25em;
+}
+
+.experience-title {
+    margin: 1em 0em;
+    display: block;
+    font-size: 1.1em;
+    font-weight: 100;
+}
+
+.experience-description {
+    margin-top: 1em;
+    display: block;
+    line-height: 1.1;
+    font-weight: 200;
+    letter-spacing: 1.3px;
+}
+
+.experience-bullet {
+    margin-top: 0.3em;
+    display: block;
+}
+
+.experience-container {
+    height: auto;
+    margin: 3em 0;
+    background-color: inherit;
+}
+
+.experience-logo > img {
+    object-fit: contain;
+    width: 70%;
+    height: 70%;
+}
+
+/* skill slide show*/
+
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    } to {
+        transform: translateX(-100%);
+    }
+}
+
+.slide:hover .slide-track {
+    animation-play-state: paused;
+}
+
+.slide {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    overflow: hidden;
+}
+
+.slide > img {
+    /* background-color: rgb(255, 245, 98); */
+    padding: 10px;
+    display: inline;
+    height: 10vw;
+    /* max-height: 75px; */
+    width: fit-content;
+}
+
+.slide-track {
+    display: flex;
+    justify-content: space-around;
+    gap: 0;
+    width: 250vw;
+    flex-wrap: nowrap;
+    animation: 20s slide infinite linear;
+}
+
+.subtitle {
+    color: white;
+    margin: 10vh;
+}
+
+.skills.screen-container {
+    height: 105vh;
+}

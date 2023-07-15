@@ -1,0 +1,171 @@
+
+.title {
+    color: white;
+}
+
+#display-page {
+    background-color:rgb(255, 255, 255, 0.75);
+    /* background-color: rgb(19, 14, 34); */
+    color: black;
+    font-family: 'Poppins',sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+    top: 5vh;
+    left: 5vw;
+    position: absolute;
+    width: 90vw;
+    height: 90vh;
+    margin: auto;
+    overflow-y: auto;
+    /* border: 1px solid #000; */
+    box-sizing: border-box;
+    overflow-x: hidden;
+    transition: opacity 1.5s ease-in-out;
+}
+
+#display-page.appear {
+    opacity: 1;
+}
+
+#display-page.fadeOut {
+    opacity: 0;
+}
+
+
+#display-page.disappear {
+    opacity: 0;
+}
+
+.project-grid {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+    width: 100%;
+}
+
+.project-card {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    width: 30%;
+    height: 40%;
+    border-radius: 20px;
+    background-color: lightgreen;
+    overflow: hidden;
+    /* border: 1px solid #000; */
+    box-shadow: 0 2px 10px 1px rgb(0 0 0 / 0.2);
+}
+
+@media screen and (max-width: 880px) {
+    .project-card {
+        width: 40%;
+        height: 30%;
+    }
+}
+
+.project-card > img {
+    width: 80%;
+}
+
+.project-card > video {
+    height: 100%;
+    width: 100%;
+    object-fit: fill;
+}
+
+.demo > video {
+    height: 100%;
+    /* width: 100%; */
+    object-fit: fill;
+}
+
+.demo > img {
+    height: 100%;
+    width: 80%;
+    object-fit: contain;
+}
+
+.project-info {
+    height: 15%;
+    text-align: center;
+    font-family: inconsolata,monospace;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    font-weight: normal;
+    font-size: 10px;
+
+}
+
+.demo {
+    height: 85%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.tech-logos {
+    position: absolute;
+    top: 85%;
+    height: 15%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.project-skill {
+    height: 70%;
+    background-color: rgb(255, 238, 180);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.card-overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 10px;
+}
+
+.card-overlay > span {
+    height: 0%;
+    width: 80%;
+    transition: height 0.75s ease;
+}
+
+.card-overlay:hover > span {
+    height: auto;
+    width: 80%;
+}
+
+.card-overlay {
+    position: absolute;
+    top: 100%;
+    height: 0%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.45);
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(10px);
+    z-index: 2;
+    transition: height 0.75s ease, transform 0.75s ease;
+    line-height: 2;
+    font-size: 12px;
+    overflow-y: scroll;
+}
+
+.project-card:hover > .card-overlay {
+    height: 100%;
+    transform: translateY(-100%);
+}

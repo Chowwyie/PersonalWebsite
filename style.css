@@ -1,0 +1,42 @@
+body {
+  background-color: black;
+  color: white;
+  overflow: hidden;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.master {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+}
+
+.master-canvas {
+  width: 100vw !important;
+  height: 100vh !important;
+}
+
+#three {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.appear {
+  visibility: visible;
+}
+
+.disappear {
+  visibility: hidden;
+}
+
