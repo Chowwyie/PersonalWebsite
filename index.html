@@ -392,14 +392,16 @@
         })
         const m = document.getElementById('monitor-screen');
         m.addEventListener('scroll', function() {
-          const scrollAppearList = m.querySelectorAll('.scroll-appear');
-          scrollAppearList.forEach(element => {
-            var position = element.getBoundingClientRect().top;
-            var windowHeight = window.innerHeight;
-            if (position < windowHeight / 1.2) {
-              element.classList.add('appear');
-            }
-          });
+          if (m.className === "appear") {
+            const scrollAppearList = m.querySelectorAll('.scroll-appear');
+            scrollAppearList.forEach(element => {
+              var position = element.getBoundingClientRect().top;
+              var windowHeight = window.innerHeight;
+              if (position < windowHeight / 1.2) {
+                element.classList.add('appear');
+              }
+            });
+          }
         });
 
         const w = document.getElementById('desktop-screen');
@@ -408,6 +410,7 @@
         const parallaxList = w.querySelectorAll('.doodle.up');
         const rocket = w.querySelector('#rocket');
         w.addEventListener('scroll', function() {
+          if (document.getElementById('intro-webpage').className === "appear") {
             scrollAppearList.forEach(element => {
                 var position = element.getBoundingClientRect().top;
                 var windowHeight = window.innerHeight;
@@ -426,7 +429,7 @@
             } else {
                 w.style.backgroundColor = ''; // Reset the background color if the container is not at the top of the parent div
             }
-            
+          }
         });
   </script>
 </body>

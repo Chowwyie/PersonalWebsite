@@ -34,7 +34,7 @@ export default class Master {
         })
 
         this.sizes.on("resize", () => {
-            this.update();
+            this.resize();
         })
     }
 
@@ -48,6 +48,7 @@ export default class Master {
         this.camera.resize();
         this.renderer.resize();
         this.world.resize();
+        this.animation.resize();
     }
     
 }

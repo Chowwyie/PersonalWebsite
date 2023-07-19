@@ -180,7 +180,19 @@ export default class Animation {
     }
 
     monitorTransitionOn() {
-        document.getElementById('monitor-screen').scrollTop = 0;
+        const monitorWebpage = document.getElementById('monitor-screen')
+        monitorWebpage.scrollTop = 0;
+        this.monitorResize();
+        // monitorWebpage.className = 'black';
+        // await this.sleep(200)
+        // monitorWebpage.className = 'appear';
+        // await this.sleep(100)
+        // monitorWebpage.className = 'black';
+        // await this.sleep(200)
+        monitorWebpage.className = 'appear';
+    }
+
+    monitorResize() {
         const monitorWebpage = document.getElementById('monitor-screen')
         const topLeftScreenCoords =  this.convertWorldToScreenCoordinates(Positions.Monitor_Screen.top_left)
         const topRightScreenCoords =  this.convertWorldToScreenCoordinates(Positions.Monitor_Screen.top_right)
@@ -190,13 +202,6 @@ export default class Animation {
         monitorWebpage.style.width = topRightScreenCoords[0] - topLeftScreenCoords[0] + "px"
         monitorWebpage.style.height = bottomLeftScreenCoords[1] - topLeftScreenCoords[1] + "px"
         monitorWebpage.style.fontSize = (bottomLeftScreenCoords[1] - topLeftScreenCoords[1])/50 + "px"
-        // monitorWebpage.className = 'black';
-        // await this.sleep(200)
-        // monitorWebpage.className = 'appear';
-        // await this.sleep(100)
-        // monitorWebpage.className = 'black';
-        // await this.sleep(200)
-        monitorWebpage.className = 'appear';
     }
 
     monitorTransitionOff() {
@@ -240,7 +245,20 @@ export default class Animation {
     }
 
     async displayPageTransitionOn() {
-        document.getElementById('display-page').scrollTop = 0;
+        const projectWebpage = document.getElementById('display-page')
+        projectWebpage.scrollTop = 0;
+        this.displayPageResize();
+        // monitorWebpage.className = 'black';
+        // await this.sleep(200)
+        // monitorWebpage.className = 'appear';
+        // await this.sleep(100)
+        // monitorWebpage.className = 'black';
+        // await this.sleep(200)
+        projectWebpage.className = 'appear';
+        await this.sleep(1500)
+    }
+
+    displayPageResize() {
         const projectWebpage = document.getElementById('display-page')
         const topLeftScreenCoords =  this.convertWorldToScreenCoordinates(Positions.Display_Page.top_left)
         const topRightScreenCoords =  this.convertWorldToScreenCoordinates(Positions.Display_Page.top_right)
@@ -250,14 +268,6 @@ export default class Animation {
         projectWebpage.style.width = topRightScreenCoords[0] - topLeftScreenCoords[0] + "px"
         projectWebpage.style.height = bottomLeftScreenCoords[1] - topLeftScreenCoords[1] + "px"
         projectWebpage.style.fontSize = (bottomLeftScreenCoords[1] - topLeftScreenCoords[1])/50 + "px"
-        // monitorWebpage.className = 'black';
-        // await this.sleep(200)
-        // monitorWebpage.className = 'appear';
-        // await this.sleep(100)
-        // monitorWebpage.className = 'black';
-        // await this.sleep(200)
-        projectWebpage.className = 'appear';
-        await this.sleep(1500)
     }
 
     async displayPageTransitionOff() {
@@ -306,5 +316,13 @@ export default class Animation {
         }
         button.setAttribute('disabled', '')
         button.classList.add('selected')
+    }
+
+    resize() {
+        if (this.checkpointName === "Display_Page") {
+            this.displayPageResize()
+        } else if (this.checkpointName === "Monitor_Screen") {
+            this.monitorResize()
+        }
     }
 }
