@@ -72,7 +72,7 @@
 
 h1 {
   display: block;
-  font-size: 3rem;
+  font-size: 6vw;
 }
 
 #about-me-content{
@@ -107,36 +107,50 @@ h1 {
 
 #about-me-description {
   display: block;
-  font-size: 1.5rem;
+  font-size: min(3vw, 1.5rem);
+  margin-top: 10px;
   /* font-weight: 100000; */
   line-height: 1.5;
 }
 
 #intro {
-  font-size: 6rem;
+  font-size: 6.5vw;
+}
+
+@media screen and (max-width: 880px) {
+  #intro {
+    font-size: 10vw;
+  }
 }
 
 #description {
-  font-size: 2rem;
+  margin-top: 10px;
+  font-size: 2.5vw;
+}
+
+@media screen and (max-width: 880px) {
+  #description {
+    font-size: 4vw;
+  }
 }
 
 #scroll-down {
   font-size: 3rem;
   position: absolute;
-  top: 90vh;
+  top: 85vh;
   left: 50vw;
   animation: slide-down 1.2s ease-in-out infinite;
 }
 
 @keyframes slide-down {
   0% {transform: translate(-50%,0);}
-  50% {transform: translate(-50%, 50%);}
+  50% {transform: translate(-50%, 5vh);}
   100% {transform: translate(-50%,0);}
 }
 
 .typed-cursor {
   position: relative;
-  font-size: 3.5rem; /* Change this value to adjust the font size */
+  font-size: 4vw; /* Change this value to adjust the font size */
   top: 0.5rem;
 }
 
@@ -169,69 +183,68 @@ h1 {
 }
 
 #heart-full {
-  width: 5em;
-  height: 5em;
-  top: 38em;
-  left: 68em;
+  width: max(5vw, 3rem);
+  top: 70vh;
+  left: 70vw;
 }
 
 #cloud {
-  top: 23em;
-  left: 15em;
-  width: 8em;
-  height: 8em;
+  top: 36vh;
+  left: 13vw;
+  width: max(10vw, 5rem);
 }
 
 #sparkle {
-  width: 5em;
-  height: 5em;
-  top: 12em;
-  left: 60em
+  width: max(5vw, 3rem);
+  top: 15vh;
+  left: 65vw;
 }
 
 #heart-striped {
-  height: 7em;
-  top: 83em;
-  left: 14em;
+  height: 7vw;
+  top: 166vh;
+  left: 20vw;
   transform: translate(-50%, -50%);
 }
 
 #star {
-  height: 20em;
-  top: 145em;
-  left: 75em;
+  height: max(20vw, 10rem);
+  top: 270vh;
+  left: 80vw;
   transform: translate(-50%, -50%);
 }
 
 #lightbulb {
-  height: 7em;
-  top: 125em;
-  left: 13em;
-  transform: translate(-50%, -50%);
+  height: 7vw;
+  top: 240vh;
+  left: 13vw;
+  /* transform: translate(-50%, -50%); */
 }
 
 #light {
-  height: 9em;
-  top: 114.5em;
-  left: 13.1em;
-  transform: translate(-50%, 50%);
+  height: 9vw;
+  /* top: 114.5em; 
+  left: 13.1em; */
+  top: 240vh;
+  left: 13vw;
+  transform: translate(-22%, -25%);
   z-index: 0;
 }
 
 #rocket {
   z-index: 0;
-  height: 9em;
-  top: 250vh;
+  height: max(10vw, 5rem);
+  top: 170vh;
 }
 
 #coffee {
-  height: 7em;
-  top: 70em;
-  left: 65em;
+  height: 8vw;
+  top: 140vh;
+  left: 75vw;
 }
 
 #power-button {
-  height: 7em;
+  height: max(10vw, 6rem);
   z-index: 10;
   transition: transform 2s ease;
   animation: shake 2s ease-in-out infinite;

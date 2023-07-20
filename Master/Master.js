@@ -39,6 +39,7 @@ export default class Master {
     }
 
     update() {
+        console.log(window.innerWidth)
         this.camera.update();
         this.renderer.update();
         this.world.update()

@@ -101,27 +101,27 @@
 }
 
 .line .experience-container:nth-child(odd) > .experience-card {
-    right: 30em;
+    right: 26rem;
 }
   
 .line .experience-container:nth-child(even) > .experience-card {
-    left: 6em;
+    left: 6rem;
 }
 
 .line .experience-container:nth-child(odd) > .experience-date {
-    left: 3em;
+    left: 3rem;
 }
   
 .line .experience-container:nth-child(even) > .experience-date {
-    right: 18em;
+    right: 18rem;
 }
 
 .line .experience-container:nth-child(odd) > .experience-card::before {
-    left: 21em;
+    left: 18rem;
   }
   
 .line .experience-container:nth-child(even) > .experience-card::before {
-    right: 21em;
+    right: 18rem;
 }
 
 
@@ -129,8 +129,8 @@
     text-align: center;
     display: block;
     position: relative;
-    width: 15em;
-    top: 2.5em;
+    width: 15rem;
+    top: 2.5rem;
     font-weight: 100;
     letter-spacing: 1px;
     color: white;
@@ -141,7 +141,7 @@
     position: relative;
     width: 20rem;
     height: fit-content;
-    padding: 1em 2em;
+    padding: 1rem 2rem;
     border-width: 0;
     border-bottom: 0.25em solid white;
 }
@@ -149,8 +149,8 @@
 .experience-card::before {
     position: absolute;
     content: "";
-    width: 3em;
-    height: 3em;
+    width: 3rem;
+    height: 3rem;
     transform: rotate(45deg);
     z-index: -1;
     background-color: inherit;
@@ -162,29 +162,29 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    right: 2.05em;
-    top: 5em;
-    width: 4em;
-    height: 4em;
+    right: 2.05rem;
+    top: 5rem;
+    width: 4rem;
+    height: 4rem;
     border-radius: 50%;
-    border: 0.2em solid white;
+    border: 0.2rem solid white;
 }
 
 .experience-company {
-    font-size: 2em;
+    font-size: 1.5rem;
     margin: 0;
-    margin-top: 0.25em;
+    margin-top: 0.2rem;
 }
 
 .experience-title {
-    margin: 1em 0em;
+    margin: 1rem 0rem;
     display: block;
-    font-size: 1.1em;
+    font-size: 1.1rem;
     font-weight: 100;
 }
 
 .experience-description {
-    margin-top: 1em;
+    margin-top: 1rem;
     display: block;
     line-height: 1.1;
     font-weight: 200;
@@ -192,13 +192,13 @@
 }
 
 .experience-bullet {
-    margin-top: 0.3em;
+    margin-top: 0.3rem;
     display: block;
 }
 
 .experience-container {
     height: auto;
-    margin: 3em 0;
+    margin: 3rem 0;
     background-color: inherit;
 }
 
@@ -233,7 +233,7 @@
     /* background-color: rgb(255, 245, 98); */
     padding: 10px;
     display: inline;
-    height: 10vw;
+    height: max(10vw, 4rem);
     /* max-height: 75px; */
     width: fit-content;
 }
