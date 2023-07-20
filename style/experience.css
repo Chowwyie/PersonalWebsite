@@ -27,7 +27,6 @@
     overflow-y: auto;
     /* border: 1px solid #ccc; */
     box-sizing: border-box;
-    overflow-x: hidden;
 }
 
 #monitor-screen.black {
@@ -168,6 +167,48 @@
     height: 4rem;
     border-radius: 50%;
     border: 0.2rem solid white;
+}
+
+@media only screen and (max-width: 890px){
+	.line .experience-container:nth-child(odd) > .experience-card {
+        right: 0rem;
+        transform: translateX(-50%);
+        margin-top: 4rem;
+        width: 70vw;
+    }
+
+    .line .experience-container:nth-child(even) > .experience-card {
+        left: 0rem;
+        transform: translateX(-50%);
+        margin-top: 4rem;
+        width: 70vw;
+    }
+
+    .experience-card::before {
+        visibility: hidden;
+    }
+
+    .experience-logo {
+        top: 1rem;
+    }
+
+    .line .experience-container:nth-child(odd) > .experience-date {
+        left: 0rem;
+        transform: translateX(-50%);
+        z-index: 1;
+        background-color: #20232a;
+        padding: 10px;
+        width: 100vw;
+    }
+      
+    .line .experience-container:nth-child(even) > .experience-date {
+        left: 0rem;
+        transform: translateX(-50%);
+        z-index: 1;
+        background-color: #20232a;
+        padding: 10px;
+        width: 100vw;
+    }
 }
 
 .experience-company {

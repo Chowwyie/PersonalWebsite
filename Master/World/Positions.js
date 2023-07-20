@@ -35,5 +35,12 @@ export default {
     References: {
         normal: {x: -0.029, y: 0.9, z: -0.05},
         center: {x: 9.755722999572754, y: 0.014757126569747925, z: 0.6800820827484131}
+    },
+    Scale: {
+        Monitor_Screen: {mobile: 3.5, computer: 3.5},
+        Desktop_Screen: {mobile: 2.5, computer: 2.8},
+        Display_Page: {mobile: 2.5, computer: 2.4},
+        Resume:{mobile: 3.03, computer: 2.8},
+        References:{mobile: 3.7, computer: 2.8},
     }
 }

@@ -6,6 +6,7 @@
   background-color: white;
   font-family: inconsolata,monospace;
   width: 100vw;
+  overflow-x: hidden;
 }
 
 #desktop-screen {
@@ -15,14 +16,13 @@
   font-family: inconsolata,monospace;
   margin: 0;
   overflow-x: hidden;
+  overflow-y: auto;
   position: absolute;
   width: 100vw;
   height: 100vh;
   margin: auto;
-  overflow-y: auto;
   border: 1px solid #ccc;
   box-sizing: border-box;
-  overflow-x: hidden;
   transition: background-color 1s ease;
 }
 

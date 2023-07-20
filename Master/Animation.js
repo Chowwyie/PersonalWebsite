@@ -15,6 +15,7 @@ export default class Animation {
         this.navigating = false
         this.checkpointName = "Desktop_Screen"
         this.dummyCamera = new THREE.PerspectiveCamera();
+        this.sizes = this.master.sizes
         
         this.setPowerButton()
 
@@ -126,7 +127,7 @@ export default class Animation {
             this.setSelectButton(aboutMeButton)
             this.disableNavBar()
             await this.turnOffAllPages(); 
-            await this.navigate("Desktop_Screen", 2.8); 
+            await this.navigate("Desktop_Screen", Positions.Scale.Desktop_Screen[this.sizes.device]); 
             this.desktopTransitionOn();
             this.enableNavBar()
         })
@@ -135,7 +136,7 @@ export default class Animation {
             this.setSelectButton(experienceButton)
             this.disableNavBar()
             await this.turnOffAllPages(); 
-            await this.navigate("Monitor_Screen", 3.5); 
+            await this.navigate("Monitor_Screen", Positions.Scale.Monitor_Screen[this.sizes.device]); 
             this.monitorTransitionOn();
             this.enableNavBar()
         })
@@ -145,7 +146,7 @@ export default class Animation {
             this.disableNavBar()
             await this.turnOffAllPages(); 
             // this.animations.pages.forEach(page => {page.play()})
-            await this.navigate("Display_Page", 2.4)
+            await this.navigate("Display_Page", Positions.Scale.Display_Page[this.sizes.device])
             this.displayPageTransitionOn();
             this.enableNavBar()
         })
@@ -154,7 +155,7 @@ export default class Animation {
             this.setSelectButton(resumeButton)
             this.disableNavBar()
             await this.turnOffAllPages(); 
-            await this.navigate("Resume", 2.8);
+            await this.navigate("Resume", Positions.Scale.Resume[this.sizes.device]);
             console.log(document.getElementById("resume"))
             document.getElementById("resume").className = "fadeIn"
             this.animations.pokeballShell.reset().play()
@@ -169,7 +170,7 @@ export default class Animation {
             this.setSelectButton(referencesButton)
             this.disableNavBar()
             await this.turnOffAllPages(); 
-            await this.navigate("References", 2.8);
+            await this.navigate("References", Positions.Scale.References[this.sizes.device]);
             this.enableNavBar()
         })
         
@@ -198,8 +199,8 @@ export default class Animation {
         const topRightScreenCoords =  this.convertWorldToScreenCoordinates(Positions.Monitor_Screen.top_right)
         const bottomLeftScreenCoords =  this.convertWorldToScreenCoordinates(Positions.Monitor_Screen.bottom_left)
         monitorWebpage.style.top = topLeftScreenCoords[1] + "px"
-        monitorWebpage.style.left = topLeftScreenCoords[0] + "px"
-        monitorWebpage.style.width = topRightScreenCoords[0] - topLeftScreenCoords[0] + "px"
+        monitorWebpage.style.left = Math.max(topLeftScreenCoords[0],0) + "px"
+        monitorWebpage.style.width = Math.min(topRightScreenCoords[0] - topLeftScreenCoords[0], window.innerWidth) + "px"
         monitorWebpage.style.height = bottomLeftScreenCoords[1] - topLeftScreenCoords[1] + "px"
         monitorWebpage.style.fontSize = (bottomLeftScreenCoords[1] - topLeftScreenCoords[1])/50 + "px"
     }
@@ -264,8 +265,8 @@ export default class Animation {
         const topRightScreenCoords =  this.convertWorldToScreenCoordinates(Positions.Display_Page.top_right)
         const bottomLeftScreenCoords =  this.convertWorldToScreenCoordinates(Positions.Display_Page.bottom_left)
         projectWebpage.style.top = topLeftScreenCoords[1] + "px"
-        projectWebpage.style.left = topLeftScreenCoords[0] + "px"
-        projectWebpage.style.width = topRightScreenCoords[0] - topLeftScreenCoords[0] + "px"
+        projectWebpage.style.left = Math.max(topLeftScreenCoords[0],0) + "px"
+        projectWebpage.style.width = Math.min(topRightScreenCoords[0] - topLeftScreenCoords[0], window.innerWidth) + "px"
         projectWebpage.style.height = bottomLeftScreenCoords[1] - topLeftScreenCoords[1] + "px"
         projectWebpage.style.fontSize = (bottomLeftScreenCoords[1] - topLeftScreenCoords[1])/50 + "px"
     }
