@@ -31,7 +31,7 @@
       <li><button id="References-Nav">References</button></li>
     </ul>
   </nav>
-  <div id="room-title">Welcome to Alan's Room! <br> Use the top Nav Bar to explore the room!</div>
+  <div id="room-title">Welcome to Alan's Room! <br> Use the top Nav Bar to explore!</div>
   <!-- canvas -->
   <div id="three" class="disappear">
     <div class="master">
@@ -54,7 +54,7 @@
         <img src="/images/doodle/cloud.png" alt="" class="doodle up" id="cloud">
         <div class="screen-container">
             <h1 id="intro">Alan Chow</h1>
-            <h1 id="description">I am a <span class="highlight-container"><span class="highlight"><span class="typing"></span></span></span></h1>
+            <div id="description"><span>I am a </span><span class="highlight-container"><span class="highlight"><span class="typing"></span></span></span></div>
         </div>
         <i id="scroll-down" class="material-icons">expand_more</i>
         <div class="screen-container">
@@ -385,7 +385,7 @@
   <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
   <script>
     var typed = new Typed(".typing", {
-            strings: ["Software Engineer.", "Full Stack Developer.", "UI/UX Designer."],
+            strings: ["Software Engineer.", "Full Stack Developer.", "Front-End Engineer."],
             typeSpeed: 80,
             backSpeed: 50,
             loop: true
