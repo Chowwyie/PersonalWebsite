@@ -241,6 +241,7 @@ export default class Animation {
             await this.navigateToOrigin(3);
             document.getElementById("navbar").className = "fadeIn"
             this.setSelectButton(document.getElementById("Home-Nav"))
+            this.enableNavBar()
         });        
     }
 
