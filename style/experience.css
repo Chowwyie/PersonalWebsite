@@ -199,6 +199,7 @@
         background-color: #20232a;
         padding: 10px;
         width: 100vw;
+        font-size: 3vw;
     }
       
     .line .experience-container:nth-child(even) > .experience-date {
@@ -208,6 +209,7 @@
         background-color: #20232a;
         padding: 10px;
         width: 100vw;
+        font-size: 3vw;
     }
 }
 
@@ -229,6 +231,7 @@
     display: block;
     line-height: 1.1;
     font-weight: 200;
+    font-size: min(2vw, 1rem);
     letter-spacing: 1.3px;
 }
 
@@ -274,7 +277,7 @@
     /* background-color: rgb(255, 245, 98); */
     padding: 10px;
     display: inline;
-    height: max(10vw, 4rem);
+    height: min(15vw, 10rem);
     /* max-height: 75px; */
     width: fit-content;
 }
@@ -293,6 +296,18 @@
     margin: 10vh;
 }
 
+
+
 .skills.screen-container {
     height: 105vh;
+}
+
+@media only screen and (max-width: 480px) {
+    .title {
+        font-size: 3.75rem;
+    }
+
+    .skills.screen-container {
+        height: 115vh;
+    }
 }

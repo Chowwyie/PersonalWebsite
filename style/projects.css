@@ -46,6 +46,14 @@
     width: 100%;
 }
 
+@media only screen and (max-width: 480px) {
+    .project-grid {
+        position: relative;
+        top: 7vh;
+        height: 93vh;
+    }
+}
+
 .project-card {
     position: relative;
     top: 0;
@@ -93,7 +101,7 @@
 }
 
 .project-info {
-    height: 15%;
+    height: 20%;
     text-align: center;
     font-family: inconsolata,monospace;
     background-color: white;
@@ -101,13 +109,21 @@
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    font-weight: normal;
-    font-size: 10px;
+}
 
+.project-info h2{
+    font-weight: 100;
+    font-size: min(3vw,1rem);
+}
+
+@media only screen and (max-width: 480px) {
+    .project-info h2{
+        font-size: 10px;
+    }
 }
 
 .demo {
-    height: 85%;
+    height: 80%;
     width: 100%;
     display: flex;
     justify-content: center;

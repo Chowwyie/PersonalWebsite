@@ -107,7 +107,7 @@ h1 {
 
 #about-me-description {
   display: block;
-  font-size: min(3vw, 1.5rem);
+  font-size: min(4vw, 1.5rem);
   margin-top: 10px;
   /* font-weight: 100000; */
   line-height: 1.5;
@@ -325,4 +325,16 @@ h1 {
 
 .socials > a > img:hover {
   opacity: 50%;
+}
+
+@media only screen and (max-width: 480px) {
+  #coffee {
+      height: 14vw;
+  }
+  #light {
+      height: 14vw;
+  }
+  #lightbulb {
+      height: 12vw;
+}
 }

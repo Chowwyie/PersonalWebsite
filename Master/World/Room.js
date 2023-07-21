@@ -114,7 +114,6 @@ export default class Room {
 
 
     setModel() {
-        console.log(this.roomScene)
         this.scene.add(this.roomScene);
         // this.roomScene.scale.set(0.1, 0.1, 0.1)
         // this.roomScene.rotation.y = Math.PI
@@ -138,7 +137,6 @@ export default class Room {
     setAnimation() {
         this.mixer = new THREE.AnimationMixer(this.roomScene);
         this.animations = {}
-        console.log(this.room.animations)
         this.animations.pokeballShell= this.mixer.clipAction(this.room.animations[32]);
         this.animations.pokeballInterior = this.mixer.clipAction(this.room.animations[34]);
         this.animations.chair = this.mixer.clipAction(this.room.animations[57]);
