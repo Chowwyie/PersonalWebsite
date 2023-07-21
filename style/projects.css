@@ -46,6 +46,14 @@
     width: 100%;
 }
 
+@media only screen and (max-width: 480px) {
+    .project-grid {
+        position: relative;
+        top: 7vh;
+        height: 93vh;
+    }
+}
+
 .project-card {
     position: relative;
     top: 0;

@@ -9,7 +9,7 @@ export default class Sizes extends EventEmitter {
         this.aspect = this.width / this.height;
         this.pixelRatio = Math.min(window.devicePixelRatio, 2);
         this.frustrum = 5;
-        if (window.innerWidth <= "890") {
+        if (window.innerWidth <= "480") {
             this.device = "mobile"
         } else {
             this.device = "computer"
@@ -17,7 +17,7 @@ export default class Sizes extends EventEmitter {
 
         window.addEventListener("resize", () => {
             this.width = window.innerWidth;
-            if (window.innerWidth <= "890") {
+            if (window.innerWidth <= "480") {
                 this.device = "mobile"
             } else {
                 this.device = "computer"

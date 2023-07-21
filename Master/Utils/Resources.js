@@ -51,6 +51,5 @@ export default class Resources extends EventEmitter {
         if (this.loaded === this.queue) {
             this.emit("ready")
         }
-        console.log(this.items)
     }
 }

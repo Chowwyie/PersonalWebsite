@@ -107,7 +107,7 @@ h1 {
 
 #about-me-description {
   display: block;
-  font-size: min(3vw, 1.5rem);
+  font-size: min(5vw, 1.5rem);
   margin-top: 10px;
   /* font-weight: 100000; */
   line-height: 1.5;
