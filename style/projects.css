@@ -156,19 +156,22 @@
 }
 
 .card-overlay > span {
-    height: 0%;
+    height: 100%;
     width: 80%;
     transition: height 0.75s ease;
+    display: inline-flex;
+    align-items: center;
 }
 
 .card-overlay:hover > span {
-    height: auto;
+    height: 100%;
     width: 80%;
+    justify-content: center;
 }
 
 .card-overlay {
     position: absolute;
-    top: 100%;
+    top: 0%;
     height: 0%;
     width: 100%;
     background-color: rgba(255, 255, 255, 0.45);
@@ -183,5 +186,6 @@
 
 .project-card:hover > .card-overlay {
     height: 100%;
-    transform: translateY(-100%);
+    /* transform: translateY(-100%); */
 }
+
