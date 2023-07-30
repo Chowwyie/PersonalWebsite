@@ -161,7 +161,7 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    right: 2.05rem;
+    right: 1.9rem;
     top: 5rem;
     width: 4rem;
     height: 4rem;
@@ -262,9 +262,9 @@
     }
 }
 
-.slide:hover .slide-track {
+/* .slide:hover .slide-track {
     animation-play-state: paused;
-}
+} */
 
 .slide {
     display: flex;
