@@ -10,11 +10,10 @@ export default class Animation {
         this.master.world.on("ready", async () => {
             this.animations = this.master.world.room.animations
             this.setNavBar()
-            await this.sleep(3000)
             document.getElementById("preloader").classList.add("done")
             setTimeout(function() {
                 document.getElementById("preloader").style.display = 'none';
-              }, 2000);
+              }, 500);
         });
         this.timeline = gsap.timeline()
         this.navigating = false
@@ -253,6 +252,7 @@ export default class Animation {
     async displayPageTransitionOn() {
         const projectWebpage = document.getElementById('display-page')
         projectWebpage.scrollTop = 0;
+        await this.sleep(50)
         this.displayPageResize();
         // monitorWebpage.className = 'black';
         // await this.sleep(200)

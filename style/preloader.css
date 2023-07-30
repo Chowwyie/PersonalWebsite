@@ -10,7 +10,7 @@
     flex-direction: row;
     font-size: 40px;
     font-family: inconsolata,monospace;
-    transition: opacity 2s ease-out;
+    transition: opacity 0.5s ease-out;
 }
 
 
