@@ -1,4 +1,5 @@
 #preloader {
+    position: absolute;
     z-index: 99999;
     background-color: #525375;
     height: 100vh;
@@ -9,12 +10,22 @@
     flex-direction: row;
     font-size: 40px;
     font-family: inconsolata,monospace;
+    transition: opacity 2s ease-out;
 }
 
-.load-circle {
+
+#preloader.done {
+    opacity: 0;
+}
+
+.loading {
+    margin: 7px;
+}
+
+.loading.load-circle {
     height: 10px;
     width: 10px;
-    background-color: aqua;
+    background-color: white;
     border-radius: 100%;
     margin: 10px;
     margin-top: 25px;
@@ -34,6 +45,72 @@
     }
 }
 
+#up {
+    margin-left: 50px;
+}
+
 .loading {
+    animation: bounce 1s ease-in-out infinite;
+}
+
+.loading:nth-child(2) {
+    animation-delay:0.1s; 
+}
+
+.loading:nth-child(3) {
+    animation-delay:0.2s; 
+}
+
+.loading:nth-child(4) {
+    animation-delay:0.3s; 
+}
+
+.loading:nth-child(5) {
+    animation-delay:0.4s; 
+}
+
+.loading:nth-child(6) {
+    animation-delay:0.5s; 
+}
+
+.loading:nth-child(7) {
+    animation-delay:0.6s; 
+}
+
+.loading:nth-child(8) {
+    animation-delay:0.7s; 
+}
+
+.loading:nth-child(9) {
+    animation-delay:0.8s; 
+}
+
+.loading:nth-child(10) {
+    animation-delay:0.9s; 
+}
+
+.loading:nth-child(11) {
+    animation-delay:1s; 
+}
+
+.loading:nth-child(12) {
+    animation-delay:1.1s; 
+}
+
+@media screen and (max-width: 880px) {
+    .load-letter {
+        display: none;
+    }
+
+    .loading:nth-child(10) {
+        animation-delay:0s; 
+    }
+
+    .loading:nth-child(11) {
+        animation-delay:0.1s; 
+    }
     
+    .loading:nth-child(12) {
+        animation-delay:0.2s; 
+    }
 }
