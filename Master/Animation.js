@@ -7,9 +7,14 @@ export default class Animation {
     constructor() {
         this.master = new Master();
         this.camera = this.master.camera.perspectiveCamera
-        this.master.world.on("ready", () => {
+        this.master.world.on("ready", async () => {
             this.animations = this.master.world.room.animations
             this.setNavBar()
+            await this.sleep(3000)
+            document.getElementById("preloader").classList.add("done")
+            setTimeout(function() {
+                document.getElementById("preloader").style.display = 'none';
+              }, 2000);
         });
         this.timeline = gsap.timeline()
         this.navigating = false
