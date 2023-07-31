@@ -169,7 +169,7 @@
     border: 0.2rem solid white;
 }
 
-@media only screen and (max-width: 890px){
+@media only screen and (max-width: 56rem){
 	.line .experience-container:nth-child(odd) > .experience-card {
         right: 0rem;
         transform: translateX(-50%);
